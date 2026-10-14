@@ -115,6 +115,6 @@ public class OriginsMod implements ModInitializer {
 			sb.append("§f").append(cd[1]).append(' ');
 			sb.append(r <= 0 ? "§aprêt" : "§c" + ((r + 19) / 20) + " s");
 		}
-		Compat.actionbar(p, Component.literal(sb.toString()));
+		Compat.overlay(p, Component.literal(sb.toString()));
 	}
 }
