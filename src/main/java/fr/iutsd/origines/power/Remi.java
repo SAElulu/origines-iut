@@ -56,7 +56,7 @@ public final class Remi extends OriginPower {
 			return;
 		}
 		List<Mob> troop = lvl.getEntitiesOfClass(Mob.class, box,
-			x -> x.isAlive() && (x.getType() == EntityType.IRON_GOLEM || (x instanceof TamableAnimal t && t.isTame() && t.isOwnedBy(p))));
+			x -> x.isAlive() && (Compat.typeId(x).equals("iron_golem") || (x instanceof TamableAnimal t && t.isTame() && t.isOwnedBy(p))));
 		if (troop.isEmpty()) {
 			say(p, "§7Pas de troupe : apprivoise un loup ou construis un golem de fer.");
 			return;

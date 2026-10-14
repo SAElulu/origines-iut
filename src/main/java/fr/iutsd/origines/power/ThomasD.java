@@ -133,9 +133,8 @@ public final class ThomasD extends OriginPower {
 
 	@Override
 	public void onBlockBroken(ServerPlayer p, PlayerState s, BlockState st) {
-		if (st.is(BlockTags.COAL_ORES) || st.is(BlockTags.IRON_ORES) || st.is(BlockTags.COPPER_ORES)
-				|| st.is(BlockTags.GOLD_ORES) || st.is(BlockTags.REDSTONE_ORES) || st.is(BlockTags.LAPIS_ORES)
-				|| st.is(BlockTags.DIAMOND_ORES) || st.is(BlockTags.EMERALD_ORES)) {
+		String id = Compat.blockPath(st);
+		if (id.endsWith("_ore") || id.equals("ancient_debris")) {
 			p.giveExperiencePoints(oreXp);
 		}
 	}

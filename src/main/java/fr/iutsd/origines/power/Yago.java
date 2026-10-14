@@ -84,7 +84,7 @@ public final class Yago extends OriginPower {
 		// Ambassadeur : un villageois proche = prix du Héros du village
 		if (now % 20 == p.getId() % 20) {
 			boolean near = !lvl.getEntitiesOfClass(LivingEntity.class, p.getBoundingBox().inflate(10),
-				x -> x.getType() == EntityType.VILLAGER || x.getType() == EntityType.WANDERING_TRADER).isEmpty();
+				x -> Compat.typeId(x).equals("villager") || Compat.typeId(x).equals("wandering_trader")).isEmpty();
 			if (near) Compat.passive(p, MobEffects.HERO_OF_THE_VILLAGE, 100, 0);
 		}
 	}
