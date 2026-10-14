@@ -1,0 +1,19 @@
+{
+	"schemaVersion": 1,
+	"id": "origines_iut",
+	"version": "${version}",
+	"name": "Origines IUT SD",
+	"description": "Mod d'origines inspire d'Origins : 9 personnages, 9 façons de jouer en survie.",
+	"authors": ["Groupe IUT SD"],
+	"license": "CC0-1.0",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["fr.iutsd.origines.OriginsMod"]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
